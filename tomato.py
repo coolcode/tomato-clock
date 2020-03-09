@@ -53,7 +53,7 @@ def tomato(minutes, notify_msg):
     while True:
         diff_seconds = int(round(time.perf_counter() - start_time))
         left_seconds = minutes * 60 - diff_seconds
-        if left_seconds <= minutes * 60 - 2:
+        if left_seconds <= 0:
             print('')
             break
 
