@@ -82,7 +82,7 @@ def notify_me(msg):
     print(msg)
     try:
         subprocess.run(['say', '-v', 'Daniel', msg])
-        subprocess.run(['terminal-notifier', '-message', msg])
+        subprocess.run(['terminal-notifier', '-title', '🍅', '-message', msg])
     except:
         pass
 
