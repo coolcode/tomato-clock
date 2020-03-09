@@ -11,7 +11,7 @@ $ chmod +x tomato.py
 $ brew install terminal-notifier 
 ```
 For notification, please refer to terminal-notifier -> https://github.com/julienXX/terminal-notifier#download
-
+![tomato-clock](https://github.com/coolcode/tomato-clock/blob/master/screenshot.png?raw=true)
 
 ```
 ====== 🍅 Tomato Clock =======
