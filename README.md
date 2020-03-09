@@ -3,12 +3,11 @@ Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 ## Install
 
-Install Python3
+Install python3
 
-(optional) 
 ```
 $ chmod +x tomato.py
-$ brew install terminal-notifier 
+$ (optional) brew install terminal-notifier 
 ```
 For notification, please refer to terminal-notifier -> https://github.com/julienXX/terminal-notifier#download
 <img src="https://github.com/coolcode/tomato-clock/blob/master/screenshot.png?raw=true" alt="terminal-notifier" width="200"/>
