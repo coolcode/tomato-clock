@@ -1,6 +1,16 @@
 # tomato-clock
 Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
+## How to use
+
+Install Python3
+
+(optional) 
+```
+$ chmod +x tomato.py
+$ brew install terminal-notifier 
+```
+For notification, please refer to terminal-notifier -> https://github.com/julienXX/terminal-notifier#download
 
 ====== 🍅 Tomato Clock =======
 ```
