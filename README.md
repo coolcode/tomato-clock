@@ -15,12 +15,12 @@ For notification, please refer to terminal-notifier -> https://github.com/julien
 ## How to use
 ```
 ====== 🍅 Tomato Clock =======
-$ tomato.py         # start a 25 minutes tomato clock + 5 minutes break
-$ tomato.py -t      # start a 25 minutes tomato clock
-$ tomato.py -t <n>  # start a <n> minutes tomato clock
-$ tomato.py -b      # take a 5 minutes break
-$ tomato.py -b <n>  # take a <n> minutes break
-$ tomato.py -h      # help
+$ ./tomato.py         # start a 25 minutes tomato clock + 5 minutes break
+$ ./tomato.py -t      # start a 25 minutes tomato clock
+$ ./tomato.py -t <n>  # start a <n> minutes tomato clock
+$ ./tomato.py -b      # take a 5 minutes break
+$ ./tomato.py -b <n>  # take a <n> minutes break
+$ ./tomato.py -h      # help
 ```
 
 ## Terminal Output
