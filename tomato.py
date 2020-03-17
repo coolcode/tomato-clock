@@ -43,6 +43,8 @@ def main():
         else:
             help()
 
+    except KeyboardInterrupt:
+        print('\n👋 goodbye')
     except Exception as ex:
         print(ex)
         exit(1)
