@@ -1,9 +1,11 @@
 # 🍅 Tomato Clock
+![Python package](https://github.com/coolcode/tomato-clock/workflows/Python%20package/badge.svg?branch=master)
+
 Tomato Clock is a simple command line pomodoro app.
 
 Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
-## Install
+## Installation
 
 Install python3
 
