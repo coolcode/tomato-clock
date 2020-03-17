@@ -23,7 +23,7 @@ setup(
     url="https://github.com/coolcode/tomato-clock",
     classifiers=['Intended Audience :: Science/Research',
                  'Intended Audience :: Developers',
-                 'License :: MIT',
+                 'License :: OSI Approved :: MIT License',
                  'Programming Language :: Python',
                  'Topic :: Software Development',
                  'Topic :: Scientific/Engineering',
