@@ -1,4 +1,6 @@
 # 🍅 Tomato Clock
+Tomato Clock is a simple command line pomodoro app.
+
 Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 ## Install
