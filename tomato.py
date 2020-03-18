@@ -87,6 +87,11 @@ def notify_me(msg):
         subprocess.run(['say', '-v', 'Daniel', msg])
     except:
         pass
+    # sending ubuntu desktop notification
+    try:
+        subprocess.Popen(["notify-send", '🍅', msg])
+    except Exception as e:
+        pass
 
 
 def help():
