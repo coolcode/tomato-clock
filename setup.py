@@ -13,7 +13,7 @@ Github (https://github.com/coolcode/tomato-clock)
 
 setup(
     name="tomato-clock",
-    version="0.0.2",
+    version="{new_version}",
     author="Bruce Lee",
     author_email="bruce.meerkat@gmail.com",
     description=description,
