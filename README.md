@@ -25,7 +25,11 @@ $ (optional) brew install terminal-notifier
 - terminal-notifier
 
 For notification, please refer to terminal-notifier ➜ https://github.com/julienXX/terminal-notifier#download
-<img src="https://github.com/coolcode/tomato-clock/blob/master/screenshot.png?raw=true" alt="terminal-notifier" width="200"/>
+<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-macos.png?raw=true" alt="terminal-notifier" width="200"/>
+
+- Ubuntu desktop notification
+<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-ubuntu.png?raw=true" alt="ubuntu-notification" width="200"/>
+
 
 ## How to use
 
@@ -60,8 +64,8 @@ $ ./tomato.py -h      # help
 
 ## Package & Publish
 ```
-pip install twine
-python setup.py sdist bdist_wheel
+pip install setuptools wheel twine
+rm -rf dist && python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
 
