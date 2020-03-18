@@ -110,22 +110,7 @@ def notify_me(msg):
         pass
 
 
-def get_platform():
-    platforms = {
-        'linux1': 'Linux',
-        'linux2': 'Linux',
-        'darwin': 'OS X',
-        'win32': 'Windows'
-    }
-    if sys.platform not in platforms:
-        return sys.platform
-
-    return platforms[sys.platform]
-
-
 def help():
-    print(get_platform())
-    return
     appname = sys.argv[0]
     appname = appname if appname.endswith('.py') else 'tomato'  # tomato is pypi package
     print('====== 🍅 Tomato Clock =======')
