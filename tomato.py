@@ -75,26 +75,57 @@ def progressbar(curr, total, duration=10, extra=''):
 
 def notify_me(msg):
     '''
+    # macos desktop notification
     terminal-notifier -> https://github.com/julienXX/terminal-notifier#download
     terminal-notifier -message <msg>
-    say -v Ting-Ting <msg>
-    #Cantonese：
-    say -v Sin-ji <msg>
+
+    # voice notification
+    say -v <lang> <msg>
+    lang options:
+    - Daniel:       British English
+    - Ting-Ting:    Mandarin
+    - Sin-ji:       Cantonese
+
+
+    # ubuntu desktop notification
+    notify-send
     '''
+
     print(msg)
     try:
-        subprocess.run(['terminal-notifier', '-title', '🍅', '-message', msg])
-        subprocess.run(['say', '-v', 'Daniel', msg])
+        if sys.platform == 'darwin':
+            # macos desktop notification
+            subprocess.run(['terminal-notifier', '-title', '🍅', '-message', msg])
+            subprocess.run(['say', '-v', 'Daniel', msg])
+        elif sys.platform.startswith('linux'):
+            # ubuntu desktop notification
+            subprocess.Popen(["notify-send", '🍅', msg])
+        else:
+            # windows?
+            # TODO: windows notification
+            pass
+
     except:
+        # skip the notification error
         pass
-    # sending ubuntu desktop notification
-    try:
-        subprocess.Popen(["notify-send", '🍅', msg])
-    except Exception as e:
-        pass
+
+
+def get_platform():
+    platforms = {
+        'linux1': 'Linux',
+        'linux2': 'Linux',
+        'darwin': 'OS X',
+        'win32': 'Windows'
+    }
+    if sys.platform not in platforms:
+        return sys.platform
+
+    return platforms[sys.platform]
 
 
 def help():
+    print(get_platform())
+    return
     appname = sys.argv[0]
     appname = appname if appname.endswith('.py') else 'tomato'  # tomato is pypi package
     print('====== 🍅 Tomato Clock =======')

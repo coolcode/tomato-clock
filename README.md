@@ -13,24 +13,14 @@ Install python from https://www.python.org/
 - Install via pip:
 ```
 $ pip install tomato-clock
-$ (optional) brew install terminal-notifier 
 ```
 
 - Install via source code:
 ```
 $ git clone https://github.com/coolcode/tomato-clock.git
 $ cd tomato-clock
-$ chmod +x tomato.py
-$ (optional) brew install terminal-notifier 
+$ chmod +x tomato.py 
 ```
-- terminal-notifier
-
-For notification, please refer to terminal-notifier ➜ https://github.com/julienXX/terminal-notifier#download
-<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-macos.png?raw=true" alt="terminal-notifier" width="200"/>
-
-- Ubuntu desktop notification
-<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-ubuntu.png?raw=true" alt="ubuntu-notification" width="200"/>
-
 
 ## How to use
 
@@ -60,6 +50,40 @@ $ ./tomato.py -h      # help
 ```
 🍅 tomato 25 minutes. Ctrl+C to exit
  🍅🍅---------------------------------------------- [8%] 23:4 ⏰ 
+```
+
+## Desktop Notification
+
+- MacOS
+
+```
+$ brew install terminal-notifier 
+```
+
+`terminal-notifier` actually is a cross-platform desktop notifier, please refer to ➜ [terminal-notifier](https://github.com/julienXX/terminal-notifier#download)
+
+<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-macos.png?raw=true" alt="terminal-notifier" width="200"/>
+
+- Ubuntu
+
+`notify-send`
+
+<img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-ubuntu.png?raw=true" alt="ubuntu-notification" width="200"/>
+
+
+
+## Voice Notification
+We use `say`(text-to-speech) for voice notification 
+
+- MacOS
+
+MacOS already has `say`. see [here](https://ss64.com/osx/say.html) or [more detail](https://gist.github.com/mculp/4b95752e25c456d425c6)  
+
+- Ubuntu
+
+see this link: [say](http://manpages.ubuntu.com/manpages/trusty/man1/say.1.html)
+```
+sudo apt-get install gnustep-gui-runtime
 ```
 
 
