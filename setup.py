@@ -1,30 +1,30 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup, find_packages
+from os import path
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
 
 description = "Tomato Clock is a simple command line pomodoro app"
-long_description = """
-Tomato Clock is a simple command line pomodoro app.
-The Pomodoro technique is a time management technique for improving productivity.
-Check (https://en.wikipedia.org/wiki/Pomodoro_Technique) for more details.
-Github (https://github.com/coolcode/tomato-clock)
-"""
-
+version = "0.0.8"
 
 setup(
     name="tomato-clock",
-    version="{new_version}",
+    version=version,
     author="Bruce Lee",
     author_email="bruce.meerkat@gmail.com",
     description=description,
     long_description=long_description,
+    long_description_content_type='text/markdown',
     license="MIT",
-    keywords="pomodoro,tomato,tomato-timer,terminal,terminal-app,pomodoro-timer",
+    keywords="pomodoro tomato tomato-timer terminal terminal-app pomodoro-timer",
     url="https://github.com/coolcode/tomato-clock",
     classifiers=['Intended Audience :: Science/Research',
                  'Intended Audience :: Developers',
                  'License :: OSI Approved :: MIT License',
-                 'Programming Language :: Python',
+                 "Programming Language :: Python",
                  'Topic :: Software Development',
                  'Topic :: Scientific/Engineering',
                  'Operating System :: Microsoft :: Windows',
@@ -32,6 +32,10 @@ setup(
                  'Operating System :: Unix',
                  'Operating System :: MacOS'],
     platforms='any',
-    scripts=['tomato.py'],
-    include_package_data=True
+    include_package_data=True,
+    package_data={"": ["*.md"]},
+    packages=find_packages(),
+    entry_points={"console_scripts": ["tomato = tomato:main"]},
+    setup_requires=["wheel"],
+    scripts=['tomato.py']
 )

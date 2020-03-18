@@ -90,13 +90,15 @@ def notify_me(msg):
 
 
 def help():
+    appname = sys.argv[0]
+    appname = appname if appname.endswith('.py') else 'tomato'  # tomato is pypi package
     print('====== 🍅 Tomato Clock =======')
-    print(f'./tomato.py         # start a {WORK_MINUTES} minutes tomato clock + {BREAK_MINUTES} minutes break')
-    print(f'./tomato.py -t      # start a {WORK_MINUTES} minutes tomato clock')
-    print(f'./tomato.py -t <n>  # start a <n> minutes tomato clock')
-    print(f'./tomato.py -b      # take a {BREAK_MINUTES} minutes break')
-    print(f'./tomato.py -b <n>  # take a <n> minutes break')
-    print(f'./tomato.py -h      # help')
+    print(f'{appname}         # start a {WORK_MINUTES} minutes tomato clock + {BREAK_MINUTES} minutes break')
+    print(f'{appname} -t      # start a {WORK_MINUTES} minutes tomato clock')
+    print(f'{appname} -t <n>  # start a <n> minutes tomato clock')
+    print(f'{appname} -b      # take a {BREAK_MINUTES} minutes break')
+    print(f'{appname} -b <n>  # take a <n> minutes break')
+    print(f'{appname} -h      # help')
 
 
 if __name__ == "__main__":
