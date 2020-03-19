@@ -79,16 +79,15 @@ def notify_me(msg):
     terminal-notifier -> https://github.com/julienXX/terminal-notifier#download
     terminal-notifier -message <msg>
 
+    # ubuntu desktop notification
+    notify-send
+
     # voice notification
     say -v <lang> <msg>
     lang options:
     - Daniel:       British English
     - Ting-Ting:    Mandarin
     - Sin-ji:       Cantonese
-
-
-    # ubuntu desktop notification
-    notify-send
     '''
 
     print(msg)
