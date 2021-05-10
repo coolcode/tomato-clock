@@ -14,6 +14,8 @@
 import sys
 import time
 import subprocess
+from win10toast import ToastNotifier
+from multiprocessing import Process
 
 WORK_MINUTES = 25
 BREAK_MINUTES = 5
@@ -73,6 +75,13 @@ def progressbar(curr, total, duration=10, extra=''):
     print('\r', '🍅' * filled + '--' * (duration - filled), '[{:.0%}]'.format(frac), extra, end='')
 
 
+def notify_win(msg):
+    toaster = ToastNotifier()
+    toaster.show_toast("🍅", msg, icon_path=None, duration=5, threaded=False)
+    while toaster.notification_active():
+        time.sleep(5)
+
+
 def notify_me(msg):
     '''
     # macos desktop notification
@@ -100,10 +109,12 @@ def notify_me(msg):
             # ubuntu desktop notification
             subprocess.Popen(["notify-send", '🍅', msg])
         else:
-            # windows?
+            # windows? 使用第三方库 win10toast
             # TODO: windows notification
-            pass
-
+            p = Process(target=notify_win(msg))
+            p.start()
+            p.join()
+            
     except:
         # skip the notification error
         pass
