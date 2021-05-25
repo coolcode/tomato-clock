@@ -10,10 +10,11 @@
 # ./tomato.py -b <n>  # take a <n> minutes break
 # ./tomato.py -h      # help
 
-
+import subprocess
 import sys
 import time
-import subprocess
+
+from win10toast import ToastNotifier
 
 WORK_MINUTES = 25
 BREAK_MINUTES = 5
@@ -99,9 +100,11 @@ def notify_me(msg):
         elif sys.platform.startswith('linux'):
             # ubuntu desktop notification
             subprocess.Popen(["notify-send", '🍅', msg])
+        elif sys.platform.startswith('win'):
+            toaster = ToastNotifier()
+            toaster.show_toast(u'🍅', msg, threaded=True)
         else:
-            # windows?
-            # TODO: windows notification
+            # other platform
             pass
 
     except:

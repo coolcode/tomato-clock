@@ -37,5 +37,8 @@ setup(
     packages=find_packages(),
     entry_points={"console_scripts": ["tomato = tomato:main"]},
     setup_requires=["wheel"],
-    scripts=['tomato.py']
+    scripts=['tomato.py'],
+    install_requires=[
+        'win10toast>=0.9',
+    ]
 )
