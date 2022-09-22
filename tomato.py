@@ -14,9 +14,12 @@
 import sys
 import time
 import subprocess
+import winsound
 
 WORK_MINUTES = 25
 BREAK_MINUTES = 5
+duration = 1000 #milliseconds
+freq = 440 #Hz
 
 
 def main():
@@ -90,6 +93,7 @@ def notify_me(msg):
     - Sin-ji:       Cantonese
     '''
 
+    winsound.Beep(freq, duration)
     print(msg)
     try:
         if sys.platform == 'darwin':
