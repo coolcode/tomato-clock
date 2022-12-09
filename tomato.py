@@ -11,7 +11,6 @@
 # ./tomato.py -h      # help
 
 
-import platform
 import subprocess
 import sys
 import time
@@ -19,8 +18,8 @@ from itertools import count
 
 from plyer import notification
 
-WORK_MINUTES = 1
-BREAK_MINUTES = 1
+WORK_MINUTES = 25
+BREAK_MINUTES = 5
 
 
 class PlatformNotSupportedException(Exception):
@@ -33,14 +32,14 @@ def main():
         try:
             # TODO: Use argsparser module
             if len(sys.argv) <= 1:
-                print(f'🍅 tomato {WORK_MINUTES} minutes. Ctrl+C to exit')
+                print(f'🍅 tomato {WORK_MINUTES} minute(s). Ctrl+C to exit')
                 tomato(WORK_MINUTES, 'It is time to take a break')
-                print(f'🛀 break {BREAK_MINUTES} minutes. Ctrl+C to exit')
+                print(f'🛀 break {BREAK_MINUTES} minute(s). Ctrl+C to exit')
                 tomato(BREAK_MINUTES, 'It is time to work')
 
             elif sys.argv[1] == '-t':
                 minutes = int(sys.argv[2]) if len(sys.argv) > 2 else WORK_MINUTES
-                print(f'🍅 tomato {minutes} minutes. Ctrl+C to exit')
+                print(f'🍅 tomato {minutes} minute(s). Ctrl+C to exit')
                 tomato(minutes, 'It is time to take a break')
 
             elif sys.argv[1] == '-b':
@@ -77,7 +76,7 @@ def tomato(minutes, notify_msg):
     notify_me(notify_msg)
 
 
-def print_progress_bar(current, total, countdown, prefix='\t', suffix='', length=100, fill='█', printEnd="\r"):
+def print_progress_bar(current, total, countdown, prefix='\t', suffix='', length=60, fill='█', printEnd="\r"):
     """
     Call in a loop to create terminal progress bar
     """
