@@ -4,6 +4,8 @@
 
 Tomato Clock is a simple command line pomodoro app.
 
+add something
+
 Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 ## Installation
