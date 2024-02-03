@@ -59,7 +59,10 @@ def tomato(minutes, notify_msg):
             print('')
             break
 
-        countdown = '{}:{} ⏰'.format(int(left_seconds / 60), int(left_seconds % 60))
+        seconds_slot = int(left_seconds % 60)
+        seconds_str = str(seconds_slot) if seconds_slot >= 10 else '0{}'.format(seconds_slot)
+
+        countdown = '{}:{} ⏰'.format(int(left_seconds / 60), seconds_str)
         duration = min(minutes, 25)
         progressbar(diff_seconds, minutes * 60, duration, countdown)
         time.sleep(1)
