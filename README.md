@@ -3,7 +3,7 @@
 [![Publish to PyPI](https://github.com/coolcode/tomato-clock/actions/workflows/package.yml/badge.svg)](https://github.com/coolcode/tomato-clock/actions/workflows/package.yml)
 [![PyPI tomato-clock](https://badge.fury.io/py/tomato-clock.svg)](https://pypi.python.org/pypi/tomato-clock/)
 
-Tomato Clock is a simple command line pomodoro app.
+Tomato Clock is a straightforward command-line Pomodoro application.
 
 - [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)
 - [番茄工作法](https://zh.wikipedia.org/zh-cn/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95)
