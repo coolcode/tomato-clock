@@ -1,53 +1,58 @@
 # 🍅 Tomato Clock
+
 [![Python package CI tomato-clock](https://github.com/coolcode/tomato-clock/workflows/Python%20package/badge.svg?branch=master)](https://github.com/coolcode/tomato-clock/actions)
 [![PyPI version tomato-clock](https://badge.fury.io/py/tomato-clock.svg)](https://pypi.python.org/pypi/tomato-clock/)
 
 Tomato Clock is a simple command line pomodoro app.
 
-Pomodoro 番茄工作法 https://en.wikipedia.org/wiki/Pomodoro_Technique
+- [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)
+- [番茄工作法](https://zh.wikipedia.org/zh-cn/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95)
 
 ## Installation
 
-Install python from https://www.python.org/
+[Install python](https://www.python.org)
 
 - Install via pip:
-```
-$ pip install tomato-clock
+
+```sh
+pip install tomato-clock
 ```
 
 - Install via source code:
-```
-$ git clone https://github.com/coolcode/tomato-clock.git
-$ cd tomato-clock
-$ chmod +x tomato.py 
+
+```sh
+git clone https://github.com/coolcode/tomato-clock.git
+cd tomato-clock
+chmod +x tomato.py 
 ```
 
 ## How to use
 
 - if you install via pip
 
-```
-
-$ tomato         # start a 25 minutes tomato clock + 5 minutes break
-$ tomato -t      # start a 25 minutes tomato clock
-$ tomato -t <n>  # start a <n> minutes tomato clock
-$ tomato -b      # take a 5 minutes break
-$ tomato -b <n>  # take a <n> minutes break
-$ tomato -h      # help
+```sh
+tomato         # start a 25 minutes tomato clock + 5 minutes break
+tomato -t      # start a 25 minutes tomato clock
+tomato -t <n>  # start a <n> minutes tomato clock
+tomato -b      # take a 5 minutes break
+tomato -b <n>  # take a <n> minutes break
+tomato -h      # help
 ```
 
 - if you install via source code
-```
-$ ./tomato.py         # start a 25 minutes tomato clock + 5 minutes break
-$ ./tomato.py -t      # start a 25 minutes tomato clock
-$ ./tomato.py -t <n>  # start a <n> minutes tomato clock
-$ ./tomato.py -b      # take a 5 minutes break
-$ ./tomato.py -b <n>  # take a <n> minutes break
-$ ./tomato.py -h      # help
+
+```sh
+./tomato.py         # start a 25 minutes tomato clock + 5 minutes break
+./tomato.py -t      # start a 25 minutes tomato clock
+./tomato.py -t <n>  # start a <n> minutes tomato clock
+./tomato.py -b      # take a 5 minutes break
+./tomato.py -b <n>  # take a <n> minutes break
+./tomato.py -h      # help
 ```
 
 ## Terminal Output
-```
+
+```sh
 🍅 tomato 25 minutes. Ctrl+C to exit
  🍅🍅---------------------------------------------- [8%] 23:4 ⏰ 
 ```
@@ -56,8 +61,8 @@ $ ./tomato.py -h      # help
 
 - MacOS
 
-```
-$ brew install terminal-notifier 
+```sh
+brew install terminal-notifier 
 ```
 
 `terminal-notifier` actually is a cross-platform desktop notifier, please refer to ➜ [terminal-notifier](https://github.com/julienXX/terminal-notifier#download)
@@ -71,9 +76,9 @@ $ brew install terminal-notifier
 <img src="https://github.com/coolcode/tomato-clock/blob/master/img/screenshot-ubuntu.png?raw=true" alt="ubuntu-notification" width="300"/>
 
 
+## Voice Notifications
 
-## Voice Notification
-We use `say`(text-to-speech) for voice notification 
+Tomato Clock uses `say`(text-to-speech) for voice notifications.
 
 - MacOS
 
@@ -82,15 +87,15 @@ MacOS already has `say`. see [here](https://ss64.com/osx/say.html) or [more deta
 - Ubuntu
 
 see this link: [say](http://manpages.ubuntu.com/manpages/trusty/man1/say.1.html)
-```
+
+```sh
 sudo apt-get install gnustep-gui-runtime
 ```
 
-
 ## Package & Publish
-```
+
+```sh
 pip install setuptools wheel twine
 rm -rf dist && python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
-
