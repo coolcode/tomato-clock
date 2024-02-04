@@ -1,7 +1,7 @@
 # 🍅 Tomato Clock
 
-[![Python package CI tomato-clock](https://github.com/coolcode/tomato-clock/workflows/Python%20package/badge.svg?branch=master)](https://github.com/coolcode/tomato-clock/actions)
-[![PyPI version tomato-clock](https://badge.fury.io/py/tomato-clock.svg)](https://pypi.python.org/pypi/tomato-clock/)
+[![Publish to PyPI](https://github.com/coolcode/tomato-clock/actions/workflows/package.yml/badge.svg)](https://github.com/coolcode/tomato-clock/actions/workflows/package.yml)
+[![PyPI tomato-clock](https://badge.fury.io/py/tomato-clock.svg)](https://pypi.python.org/pypi/tomato-clock/)
 
 Tomato Clock is a simple command line pomodoro app.
 
