@@ -8,7 +8,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 description = "Tomato Clock is a straightforward command-line Pomodoro application."
-version = "0.1.0"
+version = "0.1.2"
 
 setup(
     name="tomato-clock",
