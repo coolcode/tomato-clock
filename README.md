@@ -54,7 +54,7 @@ tomato -h      # help
 
 ```sh
 🍅 tomato 25 minutes. Ctrl+C to exit
- 🍅🍅---------------------------------------------- [8%] 23:4 ⏰ 
+ 🍅🍅---------------------------------------------- [8%] 23:04 ⏰ 
 ```
 
 ## Desktop Notification
@@ -86,16 +86,12 @@ MacOS already has `say`. see [here](https://ss64.com/osx/say.html) or [more deta
 
 - Ubuntu
 
-see this link: [say](http://manpages.ubuntu.com/manpages/trusty/man1/say.1.html)
+See this link: [say](http://manpages.ubuntu.com/manpages/trusty/man1/say.1.html)
 
 ```sh
 sudo apt-get install gnustep-gui-runtime
 ```
 
-## Package & Publish
+- Windows
 
-```sh
-pip install setuptools wheel twine
-rm -rf dist && python setup.py sdist bdist_wheel
-twine upload dist/*
-```
+Check this one: https://github.com/SeanBracksDev/tomato-clock
